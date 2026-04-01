@@ -32,15 +32,15 @@ export function Navigation() {
       >
         <div className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
           <span
-            className={`font-medium text-2xl tracking-tighter ${isScrolled ? "text-on-primary" : "text-primary"}`}
+            className={`font-medium text-2xl tracking-tighter ${isScrolled ? "text-secondary" : "text-primary"}`}
           >
             Valmo
           </span>
-          <div className="hdden md:flex items-center gap-10 font-['Lexend'] font-light tracking-tight text-lg">
+          <div className="hidden md:flex items-center gap-10 font-['Lexend']  font-light tracking-tight text-lg">
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                className={`${isScrolled ? "text-on-primary" : "text-primary"} font-medium pb-1 ${pathname === link.href ? "border-b-2 border-primary" : "border-transparent"}`}
+                className={`${isScrolled ? "text-secondary" : "text-primary"} font-medium pb-1 ${pathname === link.href ? "border-b-2 border-primary" : "border-transparent"}`}
                 href={link.href}
               >
                 {link.label}
@@ -48,7 +48,7 @@ export function Navigation() {
             ))}
           </div>
           <Button
-            className={`px-8 py-6 rounded-full font-medium hover:opacity-80 transition-all duration-300 ${isScrolled ? "bg-on-primary text-primary" : "bg-primary text-on-primary"}`}
+            className={`px-8 py-6 rounded-full font-medium transition-all duration-300 ${isScrolled ? "bg-secondary text-secondary-foreground hover:bg-secondary/80" : "bg-primary text-secondary hover:bg-primary/80"}`}
           >
             Book Now
           </Button>
