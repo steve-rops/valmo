@@ -19,6 +19,7 @@ export function ApproachSection() {
         <div className="space-y-12">
           {/* Precision Pilates */}
           <TrainerCard
+            bgImageTransparency={50}
             image="/images/approach-section/pilatesBeds.jpg"
             title="Precision Pilates"
             name="Valia"
