@@ -12,7 +12,7 @@ export default function TrainerCard({
   cta,
   ikimage,
   photoIsRight,
-  bgImageTransparency = 60,
+  bgImageTransparency,
 }: {
   ikimage: string;
   photoIsRight: boolean;
@@ -22,7 +22,7 @@ export default function TrainerCard({
   name: string;
   description: string;
   link: string;
-  bgImageTransparency?: number;
+  bgImageTransparency: number;
 }) {
   return (
     <div className="group relative overflow-hidden rounded-[2.5rem]">
@@ -35,7 +35,8 @@ export default function TrainerCard({
           className="object-cover brightness-75"
         />
         <div
-          className={`bg-black/${bgImageTransparency} absolute w-full h-full`}
+          className="bg-black absolute w-full h-full"
+          style={{ opacity: bgImageTransparency > 1 ? bgImageTransparency / 100 : bgImageTransparency }}
         />
       </div>
 

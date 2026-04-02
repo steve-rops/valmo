@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
-import { Lexend, Inter } from "next/font/google";
-import "./globals.css";
-import { Navigation } from "@/components/reused/navigation";
 import { Footer } from "@/components/reused/footer";
+import { Navigation } from "@/components/reused/navigation";
 import { cn } from "@/lib/utils";
-import { ImageKitProvider } from "@imagekit/next";
 import IKProvider from "@/providers/IKProvider";
+import type { Metadata } from "next";
+import { Inter, Lexend } from "next/font/google";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
