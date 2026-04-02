@@ -3,18 +3,17 @@ import { Image } from "@imagekit/next";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[921px] px-8 max-w-7xl mx-auto overflow-hidden mt-4 md:mt-8">
+    <section className="relative px-8 max-w-7xl mx-auto overflow-hidden mt-4 md:mt-8">
       <div className="flex flex-col md:flex-row gap-4 md:gap-16 items-center w-full">
         <div className="z-10 w-full">
-          {/* <span className="inline-block bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-6">
-            A Modern Sanctuary
-          </span> */}
           <div className="space-y-2 md:space-y-4">
-            <h1 className="text-4xl md:text-6xl font-light">VALMO Fitness</h1>
-            <h2 className="text-2xl md:text-4xl text-primary italic tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-light text-center md:text-start">
+              VALMO Fitness
+            </h1>
+            <h2 className="text-2xl md:text-4xl text-primary italic tracking-tight text-center md:text-start">
               Strength. Balance. Longevity.
             </h2>
-            <p className="text-sm md:text-base font-light text-on-surface-variant max-w-lg mb-6 md:mb-12 leading-relaxed">
+            <p className="text-sm md:text-base font-light text-on-surface-variant max-w-lg mb-6 md:mb-12 leading-relaxed text-center md:text-start">
               Redefining movement through the synthesis of athletic rigor and
               therapeutic grace. Our mission is to build resilient bodies that
               thrive today and endure tomorrow.
@@ -23,28 +22,28 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
             <Button
               size="lg"
-              className="bg-primary text-on-primary px-10 py-6 rounded-full text-lg font-medium shadow-xl shadow-primary/10 hover:translate-y-[-2px] transition-all"
+              className="bg-primary text-secondary px-10 py-6 rounded-full text-lg font-medium shadow-xl shadow-primary/10 hover:translate-y-[-2px] transition-all"
             >
               Start Your Journey
             </Button>
             <Button
-              variant="secondary"
+              variant="outline"
               size="lg"
-              className="bg-surface-container-high text-on-surface px-10 py-6 rounded-full text-lg font-medium hover:bg-surface-container-highest transition-all"
+              className="px-10 py-6 rounded-full text-lg border-primary border-2 font-medium  transition-all"
             >
               View Philosophy
             </Button>
           </div>
         </div>
 
-        <div className="relative h-[600px] md:h-[800px] w-full flex justify-center">
+        <div className="relative h-[400px] md:h-[600px] w-full flex justify-center">
           {/* Overlapping Editorial Image Composition */}
           <div className=" w-full h-full rounded-3xl overflow-hidden ">
             <Image
-              src="/CAT02416.JPG"
+              src="/valiaKaiMode.jpg"
               alt="Professional trainer performing focused strength exercise"
               fill
-              className="object-cover rounded-lg "
+              className="object-cover object-top rounded-lg "
               priority
             />
           </div>
