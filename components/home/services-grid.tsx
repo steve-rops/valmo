@@ -1,35 +1,44 @@
 import { Button } from "@/components/ui/button";
+import { 
+  Calendar, 
+  Dumbbell, 
+  Sprout, 
+  Activity, 
+  BarChart, 
+  Users, 
+  Apple 
+} from "lucide-react";
 
 export function ServicesGrid() {
   const services = [
     {
       title: "Personal Training",
-      icon: "fitness_center",
+      icon: Dumbbell,
       description: "One-on-one sessions tailored to your specific biomechanics and goals.",
     },
     {
       title: "Reformer Pilates",
-      icon: "spa",
+      icon: Sprout,
       description: "Focus on alignment and breathwork for a balanced, mobile body.",
     },
     {
       title: "Mobility & Recovery",
-      icon: "self_improvement",
+      icon: Activity,
       description: "Strategic movement aimed at increasing joint health and flexibility.",
     },
     {
       title: "Movement Assessment",
-      icon: "analytics",
+      icon: BarChart,
       description: "Deep-dive screening to identify and correct structural imbalances.",
     },
     {
       title: "Semi-Private Pods",
-      icon: "group",
+      icon: Users,
       description: "Boutique small group training (max 4) for focused attention.",
     },
     {
       title: "Longevity Coaching",
-      icon: "nutrition",
+      icon: Apple,
       description: "A holistic roadmap for sustainable health and lifelong vitality.",
     },
   ];
@@ -44,24 +53,23 @@ export function ServicesGrid() {
             className="bg-primary hover:bg-primary/90 text-on-primary px-8 py-6 rounded-full font-medium transition-all flex items-center gap-2 group"
           >
             Book a discovery call
-            <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
-              calendar_today
-            </span>
+            <Calendar className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
-          {services.map((service) => (
-            <div key={service.title} className="p-10 bg-surface/50 hover:bg-surface transition-colors">
-              <span className="material-symbols-outlined text-primary text-3xl mb-6">
-                {service.icon}
-              </span>
-              <h5 className="text-xl font-medium mb-3">{service.title}</h5>
-              <p className="font-light text-on-surface-variant">
-                {service.description}
-              </p>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-surface-container-highest border border-transparent">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div key={service.title} className="p-10 bg-[#f6f5ef] hover:bg-[#f0efe9] transition-colors relative">
+                <Icon className="w-6 h-6 text-primary mb-6" />
+                <h5 className="text-xl font-medium mb-3">{service.title}</h5>
+                <p className="font-light text-on-surface-variant text-[15px] leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
