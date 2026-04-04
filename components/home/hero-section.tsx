@@ -38,11 +38,12 @@ export function HeroSection() {
 
         <div className="relative h-[400px] md:h-[600px] w-full flex justify-center">
           {/* Overlapping Editorial Image Composition */}
-          <div className=" w-full h-full rounded-3xl overflow-hidden ">
+          <div className="relative w-full h-full rounded-3xl overflow-hidden">
             <Image
               src="/valiaKaiMode.jpg"
               alt="Professional trainer performing focused strength exercise"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-top rounded-lg "
               priority
             />
